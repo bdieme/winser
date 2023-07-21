@@ -1,0 +1,8 @@
+---
+- hosts: all
+
+  become: true
+  tasks:
+    - name: grap kb
+      ansible.windows.win_command:
+        cmd: 'wmic qfe list full /format:list'
